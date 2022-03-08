@@ -15,7 +15,7 @@
     },
     "installer": {
         "script": [
-            "$pcdir = \"$(current_dir $dir)\\lib\\pkgconfig\"",
+            "$pcdir = \"$dir\\lib\\pkgconfig\"",
             "",
             "# future sessions",
             "$null, $currpath = strip_path (env 'PKG_CONFIG_PATH' $global) $pcdir",
@@ -28,7 +28,7 @@
     },
     "uninstaller": {
         "script": [
-            "$pcdir = \"$(current_dir $dir)\\lib\\pkgconfig\"",
+            "$pcdir = \"$dir\\lib\\pkgconfig\"",
             "",
             "# future sessions",
             "$was_in_path, $newpath = strip_path (env 'PKG_CONFIG_PATH' $global) $pcdir",
